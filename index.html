@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate QR Code Generator</title>
+    <script src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>Ultimate QR Code Generator</h2>
+
+    <input type="text" id="text-input" placeholder="Enter text for QR code"><br><br>
+
+    <label>QR Code Color Type:</label>
+    <input type="radio" id="qrColorTypeSolid" name="qrColorType" value="solid" checked> Solid
+    <input type="radio" id="qrColorTypeGradient" name="qrColorType" value="gradient"> Gradient<br><br>
+
+    <label>QR Code Color:</label>
+    <input type="color" id="qrColor" value="#000000"><br><br>
+
+    <label>QR Gradient Start Color:</label>
+    <input type="color" id="gradStartColor" value="#000000"><br><br>
+
+    <label>QR Gradient End Color:</label>
+    <input type="color" id="gradEndColor" value="#ff0000"><br><br>
+
+    <label>Gradient Type:</label>
+    <select id="gradientType">
+        <option value="linear">Linear</option>
+        <option value="radial">Radial</option>
+    </select><br><br>
+
+    <label>Background Color Type:</label>
+    <input type="radio" id="bgColorTypeSolid" name="bgColorType" value="solid" checked> Solid
+    <input type="radio" id="bgColorTypeGradient" name="bgColorType" value="gradient"> Gradient<br><br>
+
+    <label>Background Color:</label>
+    <input type="color" id="bgColor" value="#ffffff"><br><br>
+
+    <label>Background Gradient Start:</label>
+    <input type="color" id="bgGradStart" value="#ffffff"><br><br>
+
+    <label>Background Gradient End:</label>
+    <input type="color" id="bgGradEnd" value="#cccccc"><br><br>
+
+    <label>QR Code Size:</label>
+    <select id="qrSize">
+        <option value="200">Small (200x200)</option>
+        <option value="300" selected>Medium (300x300)</option>
+        <option value="400">Large (400x400)</option>
+    </select><br><br>
+
+    <label>Dot Style:</label>
+    <select id="dotStyle">
+        <option value="square">Square</option>
+        <option value="rounded">Rounded</option>
+        <option value="dots">Dots</option>
+        <option value="classy">Classy</option>
+        <option value="classy-rounded">Classy Rounded</option>
+        <option value="extra-rounded">Extra Rounded</option>
+    </select><br><br>
+
+    <label>Corner Square Style:</label>
+    <select id="cornerSquareStyle">
+        <option value="square">Square</option>
+        <option value="extra-rounded">Extra Rounded</option>
+        <option value="dot">Dot</option>
+        <option value="classy">Classy</option>
+        <option value="classy-rounded">Classy Rounded</option>
+    </select><br><br>
+
+    <label>Corner Dot Style:</label>
+    <select id="cornerDotStyle">
+        <option value="square">Square</option>
+        <option value="extra-rounded">Extra Rounded</option>
+        <option value="dot">Dot</option>
+    </select><br><br>
+
+    <button onclick="generateQR()">Generate QR Code</button>
+
+    <div id="qrcode-container"></div>
+
+    <label>Download Format:</label>
+    <select id="downloadFormat">
+        <option value="png">PNG</option>
+        <option value="jpeg">JPEG</option>
+        <option value="svg">SVG</option>
+        <option value="webp">WEBP</option>
+    </select><br><br>
+
+    <button id="download-btn" onclick="downloadQR()">Download QR</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
